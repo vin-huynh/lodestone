@@ -1,5 +1,5 @@
 const letters = ["A","C","D#","F#"];
-const octaves = [1, 2, 3, 4, 5, 6, 7];
+const octaves = [1, 2, 3, 4, 5, 6];
 const samplePath = "/samples/";
 const version = 1;
 
