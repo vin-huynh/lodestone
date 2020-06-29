@@ -12,6 +12,7 @@ const Keyboard = () => {
 
     return (
         <div>
+            <p> hello world</p>
             {keys}
         </div>
     );
