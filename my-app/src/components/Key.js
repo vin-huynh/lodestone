@@ -1,5 +1,5 @@
 import React from 'react';
-import Piano from '../Piano';
+import Piano from '../Piano/Piano';
 
 const key = (props) => {
     return(

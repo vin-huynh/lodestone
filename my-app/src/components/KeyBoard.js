@@ -2,7 +2,7 @@ import React from 'react';
 import Key from './Key';
 import Notes from '../Notes';
 
-const KeyBoard = () => {
+const Keyboard = () => {
 
     const keys = Notes.map(octave => 
         <div key={octave}>
@@ -17,4 +17,4 @@ const KeyBoard = () => {
     );
 }
 
-export default KeyBoard;
+export default Keyboard;
