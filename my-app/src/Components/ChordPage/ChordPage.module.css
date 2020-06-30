@@ -1,0 +1,67 @@
+.chordPage {
+    
+}
+
+.titleBox {
+    padding: 3vh 0;
+    margin: auto;
+    width: min-content;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 0.5rem;
+    align-items: baseline;
+}
+
+.titleBox > p {
+    margin: 0;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.subTitle {
+    font-size: 2rem;
+}
+
+.imgContainer {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 16px;
+    grid-column: 2 / 3;
+    overflow: hidden;
+}
+
+.diagram {
+    width: 33vw;
+    min-width: 300px;
+    animation: rotation 60s infinite linear;
+    
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.chordContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.descriptions {
+    list-style: none;
+    letter-spacing: .2rem;
+    font-size: 1.2rem;
+}
+
+.descriptions > li {
+
+}
