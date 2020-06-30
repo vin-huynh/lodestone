@@ -22,6 +22,8 @@
 .titleBox {
     padding: 3rem 1vw;
     width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
@@ -62,12 +64,9 @@
     margin: 1vh 0;
 }
 
-.navLinks > button:hover {
-    border: none;
-    border-bottom: 2px solid black;
-}
-
-.navLinks > button:focus {
+.navLinks > button:hover,
+.navLinks > button:focus,
+.navLinks > button:active {
     border: none;
     border-bottom: 2px solid black;
 }

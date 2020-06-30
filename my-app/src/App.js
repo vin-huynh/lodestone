@@ -9,7 +9,7 @@ function App() {
   const chord = {
     root: "C",
     type: "MAJ",
-    extension: "7",
+    extension: "9",
   };
 
   return (
