@@ -1,0 +1,10 @@
+.traitList {
+    padding: 2vh 3vw;
+    margin: 0;
+
+    list-style: none;
+    letter-spacing: .2rem;
+    font-size: 1.2rem;
+    
+    grid-area: traits;
+}

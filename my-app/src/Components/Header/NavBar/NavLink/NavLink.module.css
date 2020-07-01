@@ -1,0 +1,14 @@
+.navLink {
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+    font: inherit;
+    margin: 1vh 0;
+}
+
+.navLink:hover,
+.navLink:focus,
+.navLink:active {
+    border: none;
+    border-bottom: 2px solid black;
+}

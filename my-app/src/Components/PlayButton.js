@@ -32,7 +32,7 @@ const play = () => {
 const playButton = (props) => {
     return (
         <button onClick={play}>
-            PLAY
+            ▷
         </button>
     );
 };

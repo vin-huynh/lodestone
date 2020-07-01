@@ -1,0 +1,21 @@
+.diagramContainer {
+    border: 1px solid black;
+    border-radius: 16px;
+    grid-area: diagram;
+    overflow: hidden;
+}
+
+.diagram {
+    width: 33vw;
+    min-width: 300px;
+    animation: rotation 60s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}

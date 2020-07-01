@@ -1,109 +1,18 @@
 .chordPage {
-}
-
-.titleBox {
-    padding: 3vh 0;
-    margin: 0;
-    width: min-content;
-    text-align: center;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 0.5rem;
-    align-items: baseline;
-    grid-area: title;
-    justify-self: center;
-}
-
-.titleBox > p {
-    margin: 0;
-}
-
-.title {
-    font-size: 3rem;
-}
-
-.subTitle {
-    font-size: 2rem;
-}
-
-.imgContainer {
-    text-align: center;
-    width: fit-content;
-    margin: 0;
-    border: 1px solid black;
-    border-radius: 16px;
-    grid-area: img;
-    overflow: hidden;
-}
-
-.diagram {
-    width: 33vw;
-    min-width: 300px;
-    animation: rotation 60s infinite linear;
-}
-
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-}
-
-.chordContent {
     display: grid;
     grid-template-areas:"notes  title   ."
-                        "notes  img     desc";
+                        "notes  diagram traits";
     grid-template-columns: 1fr auto 1fr;
 }
 
-.descriptions {
-    list-style: none;
-    letter-spacing: .2rem;
-    font-size: 1.2rem;
-    grid-area: desc;
-    margin: 0;
-    padding: 2vh 3vw;
-}
-
-.descriptions > li {
-
-}
-
-.chordNotes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    grid-area: notes;
-    width: min-content;
-    padding: 2vh 8vw;
-    padding-left: 12vw;
-    border-right: 1px solid black;
-}
-
-.chordNotes > li {
-
-}
-
 @media screen and (max-width:700px) {
-    .chordContent {
+    .chordPage {
         grid-template-areas:"title"
-                            "img"
-                            "desc"
+                            "diagram"
+                            "traits"
                             "notes";
         grid-template-columns: auto;
         justify-content: center;
         text-align: center;
-    }
-
-    .chordNotes {
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 2vh 8vw;
-        width: 100%;
-        box-sizing: border-box;
-        border: none;
     }
 }

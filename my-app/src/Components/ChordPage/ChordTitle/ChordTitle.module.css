@@ -1,0 +1,23 @@
+.titleBox {
+    padding: 3vh 0;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 0.5rem;
+    align-items: baseline;
+
+    grid-area: title;
+    justify-self: center;
+}
+
+.titleBox > p {
+    margin: 0;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.subTitle {
+    font-size: 2rem;
+}

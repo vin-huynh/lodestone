@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
-import Keyboard from './Components/Keyboard';
 import ChordPage from './Components/ChordPage/ChordPage';
 
 function App() {
@@ -10,6 +9,8 @@ function App() {
     root: "C",
     type: "MAJ",
     extension: "9",
+    notes: ["C","E","G","B","D"],
+    traits: ["simple","jazzy","thoughtful","soft"],
   };
 
   return (

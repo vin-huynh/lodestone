@@ -1,0 +1,29 @@
+.noteList {
+    padding: 2vh 12vw;
+    margin: 0;
+
+    width: min-content;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    grid-area: notes;
+    
+    border-right: 1px solid black;
+    list-style: none;
+}
+
+@media screen and (max-width:700px) {
+    .noteList {
+        padding: 2vh 8vw;
+        box-sizing: border-box;
+
+        width: 100%;
+
+        flex-direction: row;
+        
+        border: none;
+    }
+}
