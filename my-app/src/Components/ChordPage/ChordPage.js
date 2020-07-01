@@ -5,17 +5,15 @@ import ChordNotes from './ChordNotes/ChordNotes';
 import ChordDiagram from './ChordDiagram/ChordDiagram';
 import ChordTraits from './ChordTraits/ChordTraits';
 
-class ChordPage extends React.Component {
-    render() {
-        return(
-            <div className={classes.chordPage}>
-                <ChordTitle chord={this.props.chord} />
-                <ChordNotes notes={this.props.chord.notes} />
-                <ChordDiagram />
-                <ChordTraits traits={this.props.chord.traits} />
-            </div>
-        );
-    }
+const chordPage = (props) => {
+    return(
+        <div className={classes.chordPage}>
+            <ChordTitle chord={props.chord} />
+            <ChordNotes notes={props.chord.notes} notePlayed={props.notePlayed}/>
+            <ChordDiagram />
+            <ChordTraits traits={props.chord.traits} />
+        </div>
+    );
 }
 
-export default ChordPage;
+export default chordPage;

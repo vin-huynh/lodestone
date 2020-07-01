@@ -1,0 +1,11 @@
+.playButton {
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 4px;
+    border-right: none;
+    position: fixed;
+    bottom: 3vh;
+    right: 0;
+    padding: 3vh 5vw;
+    font-size: 1.2rem;
+}
