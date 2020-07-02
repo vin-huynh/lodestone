@@ -8,14 +8,14 @@ const navBar = (props) => {
         <div className={classes.navBar}>
             <NavTitle />
             <div className={classes.navLinks}>
-                <NavLink>
+                <NavLink to='/'>
                     EXPLORE
                 </NavLink>
-                <NavLink>
-                    FIND
-                </NavLink>
-                <NavLink>
+                <NavLink to='/create'>
                     CREATE
+                </NavLink>
+                <NavLink to='/about'>
+                    ABOUT
                 </NavLink>
             </div>
         </div>

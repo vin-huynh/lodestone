@@ -1,11 +1,12 @@
 import React from 'react';
+import { Router, Link } from 'react-router-dom';
 import classes from './NavLink.module.css';
 
 const navLink = (props) => {
     return (
-        <button className={classes.navLink}>
-            {props.children}
-        </button>
+        <Link className={classes.navLink} to={props.to}>
+                {props.children}
+        </Link>
     );
 };
 

@@ -1,0 +1,73 @@
+.about {
+    text-align: center;
+}
+
+.aboutMain {
+    margin: 10vh 0;
+}
+
+.aboutMain > h1 {
+    letter-spacing: 0.5vh;
+    padding-left: 0.5vh;
+    margin: 3vh auto;
+}
+
+.aboutMain > p {
+    width: 33vw;
+    margin: auto;
+}
+
+@media screen and (max-width:700px) {
+    .aboutMain > h1 {
+        width: 75vw;
+    }
+    .aboutMain > p {
+        width: 66vw;
+    }
+}
+
+.aboutHelp {
+    margin: 10vh 0;
+}
+
+.aboutHelpContent > div {
+    margin: 3vh 0;
+}
+
+.aboutHelp h2 {
+    margin: 5vh auto;
+}
+
+.aboutHelpContent {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.aboutHelpContent p {
+    width: 25vw;
+}
+
+.aboutHelpContent h4 {
+    width: 25vw;
+}
+
+@media screen and (max-width:1080px) {
+    .aboutHelpContent {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .aboutHelpContent p {
+        width: 50vw;
+    }
+
+    .aboutHelp h2 {
+        width: 66vw;
+    }
+    
+    .aboutHelpContent h4 {
+        width: 50vw;
+    }
+}
+

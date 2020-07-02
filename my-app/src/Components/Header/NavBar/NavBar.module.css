@@ -1,9 +1,9 @@
 .navBar {
     position: relative;
     top: 1vh;
-    left: 3vw;
+    left: 3%;
 
-    width: 97vw;
+    width: 97%;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
