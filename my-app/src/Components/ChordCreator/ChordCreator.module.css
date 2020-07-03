@@ -14,57 +14,12 @@
     justify-content: center;
 }
 
-.noteButtons > h1 {
+.noteButtons h1 {
     margin: 0;
     align-self: center;
     color: lightgray;
     width: 50%;
     text-align: center;
-}
-
-@media screen and (max-width: 600px) {
-    .noteButtons {
-        width: 66vw;
-        height: 66vw;
-    }
-
-    .noteButtons > h1 {
-        width: 60%;
-    }
-}
-
-.noteButtons > button {
-    position: absolute;
-    background-color: white;
-    text-decoration: none;
-    border: 1px solid black;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 3rem;
-}
-
-.noteButtons > button:hover,
-.noteButtons > button:focus,
-.noteButtons > button:active {
-    border: 2px solid black;
-    font-weight: bold;
-    outline: none;
-}
-
-.noteButtons > button:focus {
-    animation: fade 2s infinite linear;
-}
-
-@keyframes fade {
-    0% {
-        border:2px solid black;
-    }
-    50% {
-        border:2px solid white;
-    }
-    100% {
-        border:2px solid black;
-    }
 }
 
 .noteButtons :nth-child(1) {
@@ -125,4 +80,33 @@
 .noteButtons :nth-child(11) {
     top:  calc(26%  - 1.5rem);
     left: calc(6% - 1.5rem);
+}
+
+.selectedNotes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 66%;
+    flex-basis: 50%;
+}
+
+.selectedNotes > p {
+    display: inline-block;
+    color: gray;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.6vw;
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .noteButtons {
+        width: 66vw;
+        height: 66vw;
+    }
+
+    .noteButtons > h1 {
+        width: 60%;
+    }
 }

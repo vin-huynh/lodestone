@@ -1,0 +1,41 @@
+.noteButton {
+    position: absolute;
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid black;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+}
+
+.noteButton:focus {
+    outline: none;
+}
+
+.noteButton:hover {
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.on {
+    border: 2px solid black;
+    font-weight: bold;
+    outline: none;
+    animation: fade 2s infinite linear;
+}
+
+.off {
+
+}
+
+@keyframes fade {
+    0% {
+        border:2px solid black;
+    }
+    50% {
+        border:2px solid white;
+    }
+    100% {
+        border:2px solid black;
+    }
+}
