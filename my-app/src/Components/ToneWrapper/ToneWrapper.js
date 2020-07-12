@@ -6,6 +6,7 @@ import ChordPage from '../ChordPage/ChordPage';
 import ToneAudio from '../ToneAudio/ToneAudio';
 import About from '../About/About';
 import ChordCreator from '../ChordCreator/ChordCreator';
+import ChordFinder from '../ChordFinder/ChordFinder';
 
 const chord = {
     root: "C",
@@ -23,6 +24,7 @@ const ToneWrapper = (props) => {
             <BrowserRouter>
                 <Header />
                 <Route path='/' exact render={() => <ChordPage chord={chord} notePlayed={notePlayed}/>} />
+                <Route path='/explore' exact component={ChordFinder} />
                 <Route path='/about' exact component={About} />
                 <Route path='/create' exact component={ChordCreator} />
                 <ToneAudio setNotePlayed={setNotePlayed}/>

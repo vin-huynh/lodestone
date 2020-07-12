@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import classes from './ChordCreator.module.css';
-import NoteButton from './NoteButton/NoteButton';
+import NoteButton from '../NoteButton/NoteButton';
 
 const notes = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B"];
 

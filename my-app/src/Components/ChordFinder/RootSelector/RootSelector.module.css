@@ -1,0 +1,87 @@
+.noteButtons {
+    width: 50vh;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.noteButtons h1 {
+    margin: 0;
+    align-self: center;
+    color: lightgray;
+    width: 50%;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.noteButtons :nth-child(1) {
+    top:  calc(0%  - 1.5rem);
+    left: calc(50% - 1.5rem);
+}
+
+.noteButtons :nth-child(4) {
+    top:  calc(50%  - 1.5rem);
+    left: calc(100% - 1.5rem);
+}
+
+.noteButtons :nth-child(7) {
+    top:  calc(100%  - 1.5rem);
+    left: calc(50% - 1.5rem);
+}
+
+.noteButtons :nth-child(10) {
+    top:  calc(50%  - 1.5rem);
+    left: calc(0% - 1.5rem);
+}
+
+.noteButtons :nth-child(2) {
+    top:  calc(6%  - 1.5rem);
+    left: calc(74% - 1.5rem);
+}
+
+.noteButtons :nth-child(6) {
+    top:  calc(94%  - 1.5rem);
+    left: calc(74% - 1.5rem);
+}
+
+.noteButtons :nth-child(3) {
+    top:  calc(26%  - 1.5rem);
+    left: calc(94% - 1.5rem);
+}
+
+.noteButtons :nth-child(5) {
+    top:  calc(74%  - 1.5rem);
+    left: calc(94% - 1.5rem);
+}
+
+.noteButtons :nth-child(8) {
+    top:  calc(94%  - 1.5rem);
+    left: calc(26% - 1.5rem);
+}
+
+.noteButtons :nth-child(12) {
+    top:  calc(6%  - 1.5rem);
+    left: calc(26% - 1.5rem);
+}
+
+.noteButtons :nth-child(9) {
+    top:  calc(74%  - 1.5rem);
+    left: calc(6% - 1.5rem);
+}
+
+.noteButtons :nth-child(11) {
+    top:  calc(26%  - 1.5rem);
+    left: calc(6% - 1.5rem);
+}
+
+@media screen and (max-width: 600px) {
+    .noteButtons {
+        width: 66vw;
+        height: 66vw;
+    }
+
+    .noteButtons > h1 {
+        width: 60%;
+    }
+}

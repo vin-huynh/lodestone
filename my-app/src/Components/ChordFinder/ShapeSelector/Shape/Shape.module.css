@@ -1,0 +1,40 @@
+.shape {
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin { 
+    0% { 
+        transform: rotate(0deg) scale(1.0); 
+    }
+    12.5% {
+        transform: rotate(45deg) scale(0.8); 
+    }
+    25% {
+        transform: rotate(90deg) scale(1.0); 
+    }
+    37.5% {
+        transform: rotate(135deg) scale(0.9);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.0);
+    }
+    62.5% {
+        transform: rotate(225deg) scale(0.8);
+    }
+    75% {
+        transform: rotate(270deg) scale(1.0);
+    }
+    87.5%{
+        transform: rotate(315deg) scale(0.9);
+    }
+    100% { 
+        transform: rotate(360deg) scale(1.0);
+    }
+}
+
+.poly {
+    fill: none;
+    stroke: black;
+    stroke-width: 2px;
+    stroke-linejoin: round;
+}

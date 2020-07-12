@@ -1,0 +1,63 @@
+.btn {
+    background: none;
+    color: #3c3c3c;
+    font-size: 10vw;
+    border: none;
+    padding: 0 15vw;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.btn:active,
+.btn:focus {
+    outline: none;
+}
+
+.shapeSelector {
+    position: relative;
+    display: grid;
+    grid-template-areas: "s shape a";
+    justify-content: space-evenly;
+    align-items: center;
+    width: max-content;
+}
+
+.shape {
+    grid-area: shape;
+    text-align: center;
+}
+
+.addBtn {
+    grid-area: a;
+}
+
+.subBtn {
+    grid-area: s;
+}
+
+.shapeName {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    font-size: 3vw;
+    letter-spacing: 2vw;
+    padding-left: 2vw;
+    color: gray;
+    z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+    .shapeSelector {
+        grid-template-areas:"shape shape"
+                            "s a";
+    }
+
+    .shapeName {
+        font-size: 6vw;
+        letter-spacing: 4vw;
+        padding-left: 4vw;
+    }
+}
+
