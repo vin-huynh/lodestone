@@ -7,6 +7,8 @@ import ToneAudio from '../ToneAudio/ToneAudio';
 import About from '../About/About';
 import ChordCreator from '../ChordCreator/ChordCreator';
 import ChordFinder from '../ChordFinder/ChordFinder';
+import chords from '../../Chords';
+import * as Tone from 'tone';
 
 const chord = {
     root: "C",
@@ -17,17 +19,22 @@ const chord = {
 };
 
 const ToneWrapper = (props) => {
+    const [root,setRoot] = useState("C");
+    const [intervals,setIntervals] = useState(chords[4].maj13.intervals);
     const [notePlayed, setNotePlayed] = useState("");
+
+    const c = Tone.Frequency(root+"4").harmonize(intervals);
+    console.log(c);
 
     return (
         <div>
             <BrowserRouter>
                 <Header />
                 <Route path='/' exact render={() => <ChordPage chord={chord} notePlayed={notePlayed}/>} />
-                <Route path='/explore' exact component={ChordFinder} />
+                <Route path='/explore' exact render={() => <ChordFinder />} />
                 <Route path='/about' exact component={About} />
                 <Route path='/create' exact component={ChordCreator} />
-                <ToneAudio setNotePlayed={setNotePlayed}/>
+                <ToneAudio setNotePlayed={setNotePlayed} chord={c}/>
             </BrowserRouter>
             
         </div>

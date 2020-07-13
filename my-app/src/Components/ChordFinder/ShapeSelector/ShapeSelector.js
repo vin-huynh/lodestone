@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React from 'react';
 import classes from './ShapeSelector.module.css';
 import SelectorPage from '../SelectorPage/SelectorPage';
 import Shape from './Shape/Shape';
