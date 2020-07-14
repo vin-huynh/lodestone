@@ -6,12 +6,15 @@ import ChordDiagram from './ChordDiagram/ChordDiagram';
 import ChordTraits from './ChordTraits/ChordTraits';
 
 const chordPage = (props) => {
+
+    const letterNotes = props.notes.map(note => note.replace(/\d/,""));
+
     return(
         <div className={classes.chordPage}>
-            <ChordTitle chord={props.chord} />
-            <ChordNotes notes={props.chord.notes} notePlayed={props.notePlayed}/>
+            <ChordTitle root={props.root} quality={props.quality} />
+            <ChordNotes notes={letterNotes} notePlayed={props.notePlayed}/>
             <ChordDiagram />
-            <ChordTraits traits={props.chord.traits} />
+            <ChordTraits traits={props.traits} />
         </div>
     );
 }

@@ -9,27 +9,48 @@ class ToneAudio extends React.Component {
     constructor(props) {
         super(props);
 
-        this.chord = props.chord;
+        console.log(props.notes);
 
         this.melody = new Tone.Loop(time => {
             if(Math.random()*2<1){
-                const noteIdx = Math.floor(Math.random()*this.chord.length);
-                const note = this.chord[noteIdx];
+                const noteIdx = Math.floor(Math.random()*props.notes.length);
+                const note = props.notes[noteIdx];
                 Piano.triggerAttack(note);
-                this.props.setNotePlayed(note);
+                props.setNotePlayed(note);
             }
         }, "4n");
 
         this.bass = new Tone.Loop(time => {
             if(Math.random()*2<1.3){
-                const noteIdx = Math.floor(Math.random()*this.chord.length);
-                const note = Tone.Frequency(this.chord[noteIdx]).transpose(-24);
+                const noteIdx = Math.floor(Math.random()*props.notes.length);
+                const note = Tone.Frequency(props.notes[noteIdx]).transpose(-24);
                 Piano.triggerAttack(note);
             }
         }, "2n");
 
         this.togglePlay = this.togglePlay.bind(this);
-        console.log(this);
+    }
+
+    componentDidUpdate(prevProps) {
+        if(prevProps.notes !== this.props.notes) {
+            this.melody = new Tone.Loop(time => {
+                if(Math.random()*2<1){
+                    const noteIdx = Math.floor(Math.random()*this.props.notes.length);
+                    const note = this.props.notes[noteIdx];
+                    Piano.triggerAttack(note);
+                    this.props.setNotePlayed(note);
+                }
+            }, "4n");
+    
+            this.bass = new Tone.Loop(time => {
+                if(Math.random()*2<1.3){
+                    const noteIdx = Math.floor(Math.random()*this.props.notes.length);
+                    const note = Tone.Frequency(this.props.notes[noteIdx]).transpose(-24);
+                    Piano.triggerAttack(note);
+                }
+            }, "2n");
+    
+        }
     }
 
     togglePlay() {
