@@ -3,7 +3,7 @@
     color: #3c3c3c;
     font-size: 10vw;
     border: none;
-    padding: 0 15vw;
+    padding: 5vh 15vw;
 }
 
 .btn:hover {
@@ -27,6 +27,7 @@
 .shape {
     grid-area: shape;
     text-align: center;
+    overflow: hidden;
 }
 
 .addBtn {

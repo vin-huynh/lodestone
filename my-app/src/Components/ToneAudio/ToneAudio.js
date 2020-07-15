@@ -33,6 +33,13 @@ class ToneAudio extends React.Component {
 
     componentDidUpdate(prevProps) {
         if(prevProps.notes !== this.props.notes) {
+            if (Tone.Transport.state === "started") {
+                this.togglePlay();
+            }
+
+            this.melody.dispose();
+            this.bass.dispose();
+            
             this.melody = new Tone.Loop(time => {
                 if(Math.random()*2<1){
                     const noteIdx = Math.floor(Math.random()*this.props.notes.length);

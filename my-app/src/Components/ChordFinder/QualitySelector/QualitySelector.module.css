@@ -1,0 +1,37 @@
+.btn {
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 5rem;
+    height: 5rem;
+    margin: 1vw;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:focus,
+.btn:active {
+    font-weight: bold;
+    border: 2px solid black;
+    animation: drop 2s;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.qualities {
+    width: 66vw;
+}
+
+@keyframes drop {
+    from {
+        box-shadow: 0 0vh black;
+    }
+    to {
+        box-shadow: 0 4vh white;
+    }
+}

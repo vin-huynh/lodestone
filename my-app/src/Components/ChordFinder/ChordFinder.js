@@ -30,8 +30,13 @@ const ChordFinder = (props) => {
             <ShapeSelector shape={shape} setShape={setShape}  />
             <QualitySelector shape={shape} setQuality={setQuality}/>
             <SelectorPage title="result">
-                <h1>{root+quality}</h1>
-                <Link to="/" onClick={submitChord}>Find this Chord</Link>
+                <div className={classes.result}>
+                    <h1>{root+quality}</h1>
+                    <Link   to="/" onClick={submitChord}
+                            className={classes.link}>
+                        Find this Chord
+                    </Link>
+                </div>
             </SelectorPage>
         </div>
     );

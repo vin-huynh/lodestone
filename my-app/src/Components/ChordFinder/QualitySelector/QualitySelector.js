@@ -7,14 +7,17 @@ const QualitySelector = (props) => {
 
     const qualities = Object.entries(chords[props.shape-3]).map(entry => 
         <button key={entry}
-                onClick={() => props.setQuality(entry[0])}>
+                onClick={() => props.setQuality(entry[0])}
+                className={classes.btn}>
             {entry[0]}
         </button>
     );
 
     return (
         <SelectorPage title="select a chord quality">
-            {qualities}
+            <div className={classes.qualities}>
+                {qualities}
+            </div>
         </SelectorPage>
     );
 }
