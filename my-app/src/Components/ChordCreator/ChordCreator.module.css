@@ -98,6 +98,32 @@
     font-weight: bold;
     padding: 0.6vw;
     margin: 0;
+    text-align: center;
+}
+
+.save {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh 5vw;
+    text-align: center;
+}
+
+.save > button:active {
+    text-decoration: none;
+}
+
+.save > button {
+    color: black;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+.save > button:hover {
+    font-weight: bold;
+    border: 4px solid black;
 }
 
 @media screen and (max-width: 600px) {
@@ -108,5 +134,9 @@
 
     .noteButtons > h1 {
         width: 60%;
+    }
+
+    .selectedNotes > p {
+        font-size: 1.5rem;
     }
 }

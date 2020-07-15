@@ -45,7 +45,8 @@ const ToneWrapper = (props) => {
                                                                         setShape={setShape}
                                                                         setQuality={setQuality} />} />
                 <Route path='/about' exact component={About} />
-                <Route path='/create' exact component={ChordCreator} />
+                <Route path='/create' exact render={() => <ChordCreator setRoot={setRoot}
+                                                                        setIntervals={setIntervals} />} />
                 <ToneAudio  setNotePlayed={setNotePlayed}
                             notes={notes}/>
             </BrowserRouter>

@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './NoteButton.module.css';
 
 const noteButton = (props) => {
-    const toggled = props.toggled ? classes.on : classes.off;
+    const toggled = props.toggled ? (props.singleToggle ? classes.onSingle : classes.on) : classes.off;
 
 
     return (

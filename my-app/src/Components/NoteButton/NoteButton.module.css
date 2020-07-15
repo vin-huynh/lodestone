@@ -17,11 +17,17 @@
     font-weight: bold;
 }
 
-.on {
+.onSingle {
     border: 2px solid black;
     font-weight: bold;
     outline: none;
     animation: fade 2s infinite linear;
+}
+
+.on {
+    border: 2px solid black;
+    font-weight: bold;
+    outline: none;
 }
 
 .off {

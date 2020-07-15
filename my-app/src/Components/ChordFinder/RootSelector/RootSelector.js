@@ -13,7 +13,8 @@ const RootSelector = (props) => {
                 idx={idx} 
                 note={note}
                 toggleHandler={props.selectRoot}
-                toggled={note === props.root}/>
+                toggled={note === props.root}
+                singleToggle />
         );
     });
 

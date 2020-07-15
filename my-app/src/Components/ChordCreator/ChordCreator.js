@@ -29,9 +29,24 @@ const ChordCreator = (props) => {
         );
     });
 
-    const filler = <h1>Create a Chord!</h1>;
+    const filler = <p className={classes.filler}>Create a Chord!</p>;
 
     const center = selectedNotes.length ? selectedNotes : filler;
+
+    const getIntervals = () => {
+        const intervals = [];
+        for (let i = 0; i < buttons.length; i++) {
+            if(buttons[i]) {
+                intervals.push(i);
+            }
+        }
+        return intervals;
+    };
+
+    const updateTone = () => {
+        props.setRoot("C");
+        props.setIntervals(getIntervals());
+    }
 
     return (
         <div>
@@ -43,8 +58,9 @@ const ChordCreator = (props) => {
                     </div>
                 </div>
             </div>
-            <div>
-
+            <div className={classes.save}>
+                <h2>Save Your Chord and Listen to It!</h2>
+                <button onClick={updateTone}>Save Your Chord</button>
             </div>
         </div>
     );
