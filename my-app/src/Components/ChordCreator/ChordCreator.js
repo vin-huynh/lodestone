@@ -40,6 +40,9 @@ const ChordCreator = (props) => {
                 intervals.push(i);
             }
         }
+        while (intervals.length<3) {
+            intervals.push(0);
+        }
         return intervals;
     };
 

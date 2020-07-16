@@ -28,6 +28,15 @@ class ToneAudio extends React.Component {
             }
         }, "2n");
 
+        this.upper = new Tone.Loop(time => {
+            if(Math.random()*2<0.7){
+                const noteIdx = Math.floor(Math.random()*props.notes.length);
+                const note = Tone.Frequency(props.notes[noteIdx]).transpose(12);
+                Piano.triggerAttack(note);
+            }
+        }, "2n");
+
+
         this.togglePlay = this.togglePlay.bind(this);
     }
 
@@ -39,6 +48,7 @@ class ToneAudio extends React.Component {
 
             this.melody.dispose();
             this.bass.dispose();
+            this.upper.dispose();
             
             this.melody = new Tone.Loop(time => {
                 if(Math.random()*2<1){
@@ -56,7 +66,15 @@ class ToneAudio extends React.Component {
                     Piano.triggerAttack(note);
                 }
             }, "2n");
-    
+
+            this.upper = new Tone.Loop(time => {
+                if(Math.random()*2<0.7){
+                    const noteIdx = Math.floor(Math.random()*this.props.notes.length);
+                    const note = Tone.Frequency(this.props.notes[noteIdx]).transpose(12);
+                    Piano.triggerAttack(note);
+                }
+            }, "2n");
+
         }
     }
 
@@ -67,6 +85,7 @@ class ToneAudio extends React.Component {
         } else {
             this.bass.start(0);
             this.melody.start(0);
+            this.upper.start(0);
             Tone.Transport.start();
             console.log("playing music..");
         }

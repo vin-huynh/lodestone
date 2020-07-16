@@ -1,35 +1,35 @@
 const triads = {
     "maj": {
         intervals: [0,4,7],
-        traits: ["a","b","c","d"],
+        traits: ["happy","confident","cheerful","bright"],
     },
     "min": {
         intervals: [0,3,7],
-        traits: ["a","b","c","d"],
+        traits: ["sad","somber","sorrowful","solemn"],
     },
     "aug": {
         intervals: [0,4,8],
-        traits: ["a","b","c","d"],
+        traits: ["curious","magical","perplexing","wondrous"],
     },
     "dim": {
         intervals: [0,3,6],
-        traits: ["a","b","c","d"],
+        traits: ["agitated","ominous","forboding"],
     },
     "5": {
         intervals: [0,7,12],
-        traits: ["a","b","c","d"],
+        traits: ["pure","primal","powerful"],
     },
     "b5": {
         intervals: [0,4,6],
-        traits: ["a","b","c","d"],
+        traits: ["unstable","..","restless"],
     },
     "sus2": {
         intervals: [0,2,7],
-        traits: ["a","b","c","d"],
+        traits: ["dreaming","drifting","shimmering"],
     },
     "sus4": {
         intervals: [0,5,7],
-        traits: ["a","b","c","d"],
+        traits: ["crystalline","angelic","ethereal"],
     }
 };
 
