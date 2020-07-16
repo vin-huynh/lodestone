@@ -13,7 +13,7 @@ const triads = {
     },
     "dim": {
         intervals: [0,3,6],
-        traits: ["tense"],
+        traits: ["suspenseful"],
     },
     "5": {
         intervals: [0,7,12],
@@ -21,11 +21,11 @@ const triads = {
     },
     "b5": {
         intervals: [0,4,6],
-        traits: ["restless"],
+        traits: ["mystic"],
     },
     "sus2": {
         intervals: [0,2,7],
-        traits: ["dreaming"],
+        traits: ["dreamy"],
     },
     "sus4": {
         intervals: [0,5,7],
@@ -60,19 +60,19 @@ const sevenths = {
     },
     "aug7": {
         intervals: [0,4,8,11],
-        traits: ["wondrous"],
+        traits: ["magical"],
     },
     "7b5": {
         intervals: [0,4,6,10],
-        traits: ["uncertain"],
+        traits: ["uncertain."],
     },
     "7#5": {
         intervals: [0,4,8,10],
-        traits: ["questioning"],
+        traits: ["unusual"],
     },
     "7sus4": {
         intervals: [0,5,7,10],
-        traits: ["blossoming"],
+        traits: ["elegant"],
     },
     "6": {
         intervals: [0,4,7,9],
@@ -91,27 +91,27 @@ const ninths = {
     },
     "maj9": {
         intervals: [0,4,7,11,14],
-        traits: ["spacious"],
+        traits: ["uplifitng"],
     },
     "min9": {
         intervals: [0,3,7,10,14],
-        traits: ["mellow"],
+        traits: ["nostaglic"],
     },
     "9b5": {
         intervals: [0,4,6,10,14],
-        traits: ["expressive"],
+        traits: ["agitated"],
     },
     "9#5": {
         intervals: [0,4,8,10,14],
-        traits: ["magical"],
+        traits: ["perplexing"],
     },
     "7b9": {
         intervals: [0,4,7,10,13],
-        traits: ["creepy"],
+        traits: ["distressing"],
     },
     "7#9": {
         intervals: [0,4,7,10,15],
-        traits: ["surprising"],
+        traits: ["suprising"],
     },
     "9sus4": {
         intervals: [0,5,7,10,14],
@@ -119,25 +119,25 @@ const ninths = {
     },
     "6/9": {
         intervals: [0,4,7,9,14],
-        traits: ["relaxing"],
+        traits: ["soothing"],
     },
 };
 
 const elevenths = {
     "11": {
         intervals: [0,4,7,10,14,17],
-        traits: ["lush"],
+        traits: ["anticipating"],
     },
     "min11": {
         intervals: [0,3,7,10,14,17],
-        traits: ["beautiful"],
+        traits: ["reflective"],
     }
 }
 
 const thirteenths = {
     "13": {
         intervals: [0,4,7,10,14,17,21],
-        traits: ["jazzy"],
+        traits: ["hopeful"],
     },
     "maj13": {
         intervals: [0,4,7,11,14,18,21],
