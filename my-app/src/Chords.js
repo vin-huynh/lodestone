@@ -1,147 +1,147 @@
 const triads = {
     "maj": {
         intervals: [0,4,7],
-        traits: ["happy","confident","cheerful","bright"],
+        traits: ["happy"],
     },
     "min": {
         intervals: [0,3,7],
-        traits: ["sad","somber","sorrowful","solemn"],
+        traits: ["sad"],
     },
     "aug": {
         intervals: [0,4,8],
-        traits: ["curious","magical","perplexing","wondrous"],
+        traits: ["curious"],
     },
     "dim": {
         intervals: [0,3,6],
-        traits: ["agitated","ominous","forboding"],
+        traits: ["tense"],
     },
     "5": {
         intervals: [0,7,12],
-        traits: ["pure","primal","powerful"],
+        traits: ["primal"],
     },
     "b5": {
         intervals: [0,4,6],
-        traits: ["unstable","..","restless"],
+        traits: ["restless"],
     },
     "sus2": {
         intervals: [0,2,7],
-        traits: ["dreaming","drifting","shimmering"],
+        traits: ["dreaming"],
     },
     "sus4": {
         intervals: [0,5,7],
-        traits: ["crystalline","angelic","ethereal"],
+        traits: ["ethereal"],
     }
 };
 
 const sevenths = {
     "7": {
         intervals: [0,4,7,10],
-        traits: ["a","b","c","d"],
+        traits: ["compelling"],
     },
     "maj7": {
         intervals: [0,4,7,11],
-        traits: ["a","b","c","d"],
+        traits: ["romantic"],
     },
     "min7": {
         intervals: [0,3,7,10],
-        traits: ["a","b","c","d"],
+        traits: ["beautiful"],
     },
     "mM7": {
         intervals: [0,3,7,11],
-        traits: ["a","b","c","d"],
+        traits: ["supernatural"],
     },
     "dim7": {
         intervals: [0,3,6,9],
-        traits: ["a","b","c","d"],
+        traits: ["ominous"],
     },
     "half dim7": {
         intervals: [0,3,6,10],
-        traits: ["a","b","c","d"],
+        traits: ["dramatic"],
     },
     "aug7": {
         intervals: [0,4,8,11],
-        traits: ["a","b","c","d"],
+        traits: ["wondrous"],
     },
     "7b5": {
         intervals: [0,4,6,10],
-        traits: ["a","b","c","d"],
+        traits: ["uncertain"],
     },
     "7#5": {
         intervals: [0,4,8,10],
-        traits: ["a","b","c","d"],
+        traits: ["questioning"],
     },
     "7sus4": {
         intervals: [0,5,7,10],
-        traits: ["a","b","c","d"],
+        traits: ["blossoming"],
     },
     "6": {
         intervals: [0,4,7,9],
-        traits: ["a","b","c","d"],
+        traits: ["warm"],
     },
     "min6": {
         intervals: [0,3,7,9],
-        traits: ["a","b","c","d"],
+        traits: ["mysterious"],
     }
 };
 
 const ninths = {
     "9": {
         intervals: [0,4,7,10,14],
-        traits: ["a","b","c","d"],
+        traits: ["optimistic"],
     },
     "maj9": {
         intervals: [0,4,7,11,14],
-        traits: ["a","b","c","d"],
+        traits: ["spacious"],
     },
     "min9": {
         intervals: [0,3,7,10,14],
-        traits: ["a","b","c","d"],
+        traits: ["mellow"],
     },
     "9b5": {
         intervals: [0,4,6,10,14],
-        traits: ["a","b","c","d"],
+        traits: ["expressive"],
     },
     "9#5": {
         intervals: [0,4,8,10,14],
-        traits: ["a","b","c","d"],
+        traits: ["magical"],
     },
     "7b9": {
         intervals: [0,4,7,10,13],
-        traits: ["a","b","c","d"],
+        traits: ["creepy"],
     },
     "7#9": {
         intervals: [0,4,7,10,15],
-        traits: ["a","b","c","d"],
+        traits: ["surprising"],
     },
     "9sus4": {
         intervals: [0,5,7,10,14],
-        traits: ["a","b","c","d"],
+        traits: ["majestic"],
     },
     "6/9": {
         intervals: [0,4,7,9,14],
-        traits: ["a","b","c","d"],
+        traits: ["relaxing"],
     },
 };
 
 const elevenths = {
     "11": {
         intervals: [0,4,7,10,14,17],
-        traits: ["a","b","c","d"],
+        traits: ["lush"],
     },
     "min11": {
         intervals: [0,3,7,10,14,17],
-        traits: ["a","b","c","d"],
+        traits: ["beautiful"],
     }
 }
 
 const thirteenths = {
     "13": {
         intervals: [0,4,7,10,14,17,21],
-        traits: ["a","b","c","d"],
+        traits: ["jazzy"],
     },
     "maj13": {
         intervals: [0,4,7,11,14,18,21],
-        traits: ["a","b","c","d"],
+        traits: ["thoughtful"],
     }   
 }
 

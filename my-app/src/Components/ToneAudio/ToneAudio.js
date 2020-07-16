@@ -4,6 +4,7 @@ import Piano from '../../Piano/Piano';
 import PlayButton from './PlayButton/PlayButton';
 import classes from './ToneAudio.module.css';
 import Violins from '../../Violins/Violins';
+import Pizz from '../../Violins/Pizz';
 
 class ToneAudio extends React.Component {
 
@@ -38,9 +39,13 @@ class ToneAudio extends React.Component {
                     const note = Tone.Frequency(props.notes[noteIdx]).transpose(0);
                     notes.push(note);
                 }
-                Violins.triggerAttack(notes);
+                const duration = (Math.floor(Math.random()*4+1))+"n";
+                if(Math.random()<0.25)
+                    Pizz.triggerAttackRelease(notes,duration);
+                else
+                    Violins.triggerAttackRelease(notes,duration);
             }
-        }, "2n");
+        }, "2m");
 
 
         this.togglePlay = this.togglePlay.bind(this);
@@ -82,9 +87,13 @@ class ToneAudio extends React.Component {
                         const note = Tone.Frequency(this.props.notes[noteIdx]).transpose(0);
                         notes.push(note);
                     }
-                    Violins.triggerAttack(notes);
+                    const duration = (Math.floor(Math.random()*4+1))+"n";
+                    if(Math.random()<0.25)
+                        Pizz.triggerAttackRelease(notes,duration);
+                    else
+                        Violins.triggerAttackRelease(notes,duration);
                 }
-            }, "2n");
+            }, "2m");
 
         }
     }
