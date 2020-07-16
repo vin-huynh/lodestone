@@ -3,6 +3,7 @@ import * as Tone from 'tone';
 import Piano from '../../Piano/Piano';
 import PlayButton from './PlayButton/PlayButton';
 import classes from './ToneAudio.module.css';
+import Violins from '../../Violins/Violins';
 
 class ToneAudio extends React.Component {
 
@@ -28,11 +29,16 @@ class ToneAudio extends React.Component {
             }
         }, "2n");
 
-        this.upper = new Tone.Loop(time => {
+        this.harmony = new Tone.Loop(time => {
             if(Math.random()*2<0.7){
-                const noteIdx = Math.floor(Math.random()*props.notes.length);
-                const note = Tone.Frequency(props.notes[noteIdx]).transpose(12);
-                Piano.triggerAttack(note);
+                const notes = [];
+                const n = Math.floor(Math.random()*3+1);
+                for(let i = 0; i < n; i++) {
+                    const noteIdx = Math.floor(Math.random()*props.notes.length);
+                    const note = Tone.Frequency(props.notes[noteIdx]).transpose(0);
+                    notes.push(note);
+                }
+                Violins.triggerAttack(notes);
             }
         }, "2n");
 
@@ -48,7 +54,7 @@ class ToneAudio extends React.Component {
 
             this.melody.dispose();
             this.bass.dispose();
-            this.upper.dispose();
+            this.harmony.dispose();
             
             this.melody = new Tone.Loop(time => {
                 if(Math.random()*2<1){
@@ -67,11 +73,16 @@ class ToneAudio extends React.Component {
                 }
             }, "2n");
 
-            this.upper = new Tone.Loop(time => {
+            this.harmony = new Tone.Loop(time => {
                 if(Math.random()*2<0.7){
-                    const noteIdx = Math.floor(Math.random()*this.props.notes.length);
-                    const note = Tone.Frequency(this.props.notes[noteIdx]).transpose(12);
-                    Piano.triggerAttack(note);
+                    const notes = [];
+                    const n = Math.floor(Math.random()*3+1);
+                    for(let i = 0; i < n; i++) {
+                        const noteIdx = Math.floor(Math.random()*this.props.notes.length);
+                        const note = Tone.Frequency(this.props.notes[noteIdx]).transpose(0);
+                        notes.push(note);
+                    }
+                    Violins.triggerAttack(notes);
                 }
             }, "2n");
 
@@ -85,7 +96,7 @@ class ToneAudio extends React.Component {
         } else {
             this.bass.start(0);
             this.melody.start(0);
-            this.upper.start(0);
+            this.harmony.start(0);
             Tone.Transport.start();
             console.log("playing music..");
         }
