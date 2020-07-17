@@ -36,7 +36,7 @@ const ToneWrapper = (props) => {
         <div>
             <BrowserRouter>
                 <Header />
-                <Route path={['/','/project']} exact render={() => <ChordPage  root={root}
+                <Route path={['/','/lodestone']} exact render={() => <ChordPage  root={root}
                                                                 quality={quality}
                                                                 notes={notes}
                                                                 traits={traits}
