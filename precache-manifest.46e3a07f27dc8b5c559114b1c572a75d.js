@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b56cca8ad444e8a4bd4c4e5d5f40e13a",
+    "revision": "11ba35300cfb9dbcf9eb3ce539f7adce",
     "url": "/lodestone/index.html"
   },
   {
-    "revision": "43da2fce117858a96fc3",
-    "url": "/lodestone/static/css/main.57b2d078.chunk.css"
+    "revision": "40854c507ef3a3df5b24",
+    "url": "/lodestone/static/css/main.87ef6582.chunk.css"
   },
   {
     "revision": "cbc2798666bc04c78992",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/lodestone/static/js/2.bae55151.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "43da2fce117858a96fc3",
+    "revision": "40854c507ef3a3df5b24",
     "url": "/lodestone/static/js/main.c8a78ab1.chunk.js"
   },
   {
