@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/lodestone/precache-manifest.46e3a07f27dc8b5c559114b1c572a75d.js"
+  "/lodestone/precache-manifest.bcf9c9eae2cea1e65746887fce979e05.js"
 );
 
 self.addEventListener('message', (event) => {
