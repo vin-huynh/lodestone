@@ -1,8 +1,16 @@
 import * as Tone from 'tone';
 import Samples from './Samples';
 
-const piano = new Tone.Sampler(Samples, () => {
-	console.log("loaded piano");
-}).chain(Tone.Master);
+class Piano {
+	constructor(cb) {
+		this.sampler = new Tone.Sampler(Samples, () => {
+			cb();
+		}).chain(Tone.Master);
+	}
 
-export default piano;
+	sampler() {
+		return this.sampler;
+	}
+}
+
+export default Piano;

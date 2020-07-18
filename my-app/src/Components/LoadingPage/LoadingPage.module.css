@@ -1,0 +1,38 @@
+.title {
+    width: 30vw;
+    height: 30vw;
+    border: 2vw solid black;
+    border-radius: 30vw;
+    text-align: center;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    animation: pulse 3s infinite linear;
+}
+
+.loadingPage {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:700px) {
+    .title {
+        width: 60vw;
+        height: 60vw;
+        border: 2vw solid black;
+        border-radius: 60vw;
+        font-size: 4vw;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        border-color: black;
+    }
+    50% {
+        border-color: darkgray;
+    }
+    100% {
+        border-color: black;
+    }
+}

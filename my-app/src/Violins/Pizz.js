@@ -6,8 +6,16 @@ const sw = new Tone.StereoWidener(0.9);
 const vol = new Tone.Volume(-18);
 const f = new Tone.Filter(3690, "lowpass");
 
-const violinPizz = new Tone.Sampler(Samples, () => {
-	console.log("loaded violins");
-}).chain(f, r, sw, vol, Tone.Master);
+class ViolinPizz {
+	constructor(cb) {
+		this.sampler = new Tone.Sampler(Samples, () => {
+			cb();
+		}).chain(f, r, sw, vol, Tone.Master);
+	}
 
-export default violinPizz;
+	sampler() {
+		return this.sampler;
+	}
+}
+
+export default ViolinPizz;

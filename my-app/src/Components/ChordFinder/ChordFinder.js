@@ -32,7 +32,7 @@ const ChordFinder = (props) => {
             <SelectorPage title="result">
                 <div className={classes.result}>
                     <h1>{root+quality}</h1>
-                    <Link   to="/" onClick={submitChord}
+                    <Link   to="/chord" onClick={submitChord}
                             className={classes.link}>
                         Find this Chord
                     </Link>

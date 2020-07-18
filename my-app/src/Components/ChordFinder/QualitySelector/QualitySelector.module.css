@@ -13,7 +13,8 @@
 }
 
 .btn:focus,
-.btn:active {
+.btn:active,
+.selected {
     font-weight: bold;
     border: 2px solid black;
     animation: drop 2s;

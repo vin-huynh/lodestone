@@ -5,19 +5,22 @@ import PlayButton from './PlayButton/PlayButton';
 import classes from './ToneAudio.module.css';
 import Violins from '../../Violins/Violins';
 import Pizz from '../../Violins/Pizz';
+import ViolinPizz from '../../Violins/Pizz';
 
 class ToneAudio extends React.Component {
 
     constructor(props) {
         super(props);
 
-        console.log(props.notes);
+        this.piano = new Piano(() => props.setPianoLoaded(true));
+        this.violins = new Violins(() => props.setViolinsLoaded(true));
+        this.pizz = new ViolinPizz(() => props.setPizzLoaded(true));
 
         this.melody = new Tone.Loop(time => {
             if(Math.random()*2<1){
                 const noteIdx = Math.floor(Math.random()*props.notes.length);
                 const note = props.notes[noteIdx];
-                Piano.triggerAttack(note);
+                this.piano.sampler.triggerAttack(note);
                 props.setNotePlayed(note);
             }
         }, "4n");
@@ -26,7 +29,7 @@ class ToneAudio extends React.Component {
             if(Math.random()*2<1.3){
                 const noteIdx = Math.floor(Math.random()*props.notes.length);
                 const note = Tone.Frequency(props.notes[noteIdx]).transpose(-24);
-                Piano.triggerAttack(note);
+                this.piano.sampler.triggerAttack(note);
             }
         }, "2n");
 
@@ -41,12 +44,11 @@ class ToneAudio extends React.Component {
                 }
                 const duration = (Math.floor(Math.random()*4+1))+"n";
                 if(Math.random()<0.25)
-                    Pizz.triggerAttackRelease(notes,duration);
+                    this.pizz.sampler.triggerAttackRelease(notes,duration);
                 else
-                    Violins.triggerAttackRelease(notes,duration);
+                    this.violins.sampler.triggerAttackRelease(notes,duration);
             }
         }, "2m");
-
 
         this.togglePlay = this.togglePlay.bind(this);
     }
@@ -65,7 +67,7 @@ class ToneAudio extends React.Component {
                 if(Math.random()*2<1){
                     const noteIdx = Math.floor(Math.random()*this.props.notes.length);
                     const note = this.props.notes[noteIdx];
-                    Piano.triggerAttack(note);
+                    this.piano.sampler.triggerAttack(note);
                     this.props.setNotePlayed(note);
                 }
             }, "4n");
@@ -74,7 +76,7 @@ class ToneAudio extends React.Component {
                 if(Math.random()*2<1.3){
                     const noteIdx = Math.floor(Math.random()*this.props.notes.length);
                     const note = Tone.Frequency(this.props.notes[noteIdx]).transpose(-24);
-                    Piano.triggerAttack(note);
+                    this.piano.sampler.triggerAttack(note);
                 }
             }, "2n");
 
@@ -89,9 +91,9 @@ class ToneAudio extends React.Component {
                     }
                     const duration = (Math.floor(Math.random()*4+1))+"n";
                     if(Math.random()<0.25)
-                        Pizz.triggerAttackRelease(notes,duration);
+                        this.pizz.sampler.triggerAttackRelease(notes,duration);
                     else
-                        Violins.triggerAttackRelease(notes,duration);
+                        this.violins.sampler.triggerAttackRelease(notes,duration);
                 }
             }, "2m");
 
