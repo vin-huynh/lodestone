@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { HashRouter, Route, Redirect } from 'react-router-dom';
 import classes from './ToneWrapper.module.css';
 import Header from '../Header/Header';
 import ChordPage from '../ChordPage/ChordPage';
@@ -47,7 +47,7 @@ const ToneWrapper = (props) => {
     
     return (
         <div>
-            <BrowserRouter basename='/lodestone'>
+            <HashRouter>
                 <Header />
                 {!loaded ? <LoadingPage /> : <Redirect to="/chord" />}
                 <Route path='/chord' exact render={() => <ChordPage  root={root}
@@ -66,7 +66,7 @@ const ToneWrapper = (props) => {
                             setPianoLoaded={setPianoLoaded} 
                             setViolinsLoaded={setViolinsLoaded}
                             setPizzLoaded={setPizzLoaded} />
-            </BrowserRouter>
+            </HashRouter>
             
         </div>
     );
