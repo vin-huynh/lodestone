@@ -6,6 +6,6 @@ Explore existing chords or build your own - Lodestone will guide you in your sea
 
 ## Links
 
-Check it out here!
+Check it out here and get inspired!
 
 https://vin-huynh.github.io/lodestone/
